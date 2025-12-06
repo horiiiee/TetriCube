@@ -11,6 +11,8 @@ public class Board : MonoBehaviour
     private void Awake()
     {
         this.tilemap = GetComponentInChildren<Tilemap>();
+        ActivePiece = GetComponentInChildren<Piece>();
+
         for (int i = 0; i < Tetrominos.Length; i++)
         {
             this.Tetrominos[i].Initialize();
@@ -26,7 +28,9 @@ public class Board : MonoBehaviour
     {
         int random = Random.Range(0, this.Tetrominos.Length);
         TetraminoData data = this.Tetrominos[random];
+
         ActivePiece.Initialize(this, SpawnPosition, data);
+
         Set(ActivePiece);
     }
 
