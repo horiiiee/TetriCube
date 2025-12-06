@@ -1129,6 +1129,7 @@ GameObject:
   - component: {fileID: 869974577}
   - component: {fileID: 869974576}
   - component: {fileID: 869974575}
+  - component: {fileID: 869974578}
   m_Layer: 0
   m_Name: board
   m_TagString: Untagged
@@ -1163,6 +1164,7 @@ MonoBehaviour:
     tile: {fileID: 11400000, guid: fc7b12291bd81c24ea14b3bbbf67901e, type: 2}
   - tetramino: 6
     tile: {fileID: 11400000, guid: cd817923446b2204b9ca4a8d00114d90, type: 2}
+  SpawnPosition: {x: 1, y: 1, z: 0}
 --- !u!156049354 &869974576
 Grid:
   m_ObjectHideFlags: 0
@@ -1191,6 +1193,18 @@ Transform:
   - {fileID: 1881758256}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &869974578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 869974574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fbb6fd4483ed7b439eb845ac2a4411f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &873791088
 GameObject:
   m_ObjectHideFlags: 0
@@ -1620,7 +1634,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 1d84ce15585cc42488643b7b1049a2cb, type: 3}
   m_Resource: {fileID: 8300000, guid: 1d84ce15585cc42488643b7b1049a2cb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
