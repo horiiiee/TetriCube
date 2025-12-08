@@ -17,7 +17,7 @@ public class Piece : MonoBehaviour
             Cells = new Vector3Int[data.cells.Length];
         }
 
-        for (int i = 0; i < Cells.Length; i++)
+        for (int i = 0; i < data.cells.Length; i++)
         {
             Cells[i] = (Vector3Int)data.cells[i]; 
         }
