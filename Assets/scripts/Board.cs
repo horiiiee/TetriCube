@@ -28,7 +28,6 @@ public class Board : MonoBehaviour
 
     private void Start()
     {
-        ActivePiece = GetComponentInChildren<Piece>();
         SpawnPiece();
     }
 
