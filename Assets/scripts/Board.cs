@@ -7,6 +7,15 @@ public class Board : MonoBehaviour
     public Piece ActivePiece { get; private set; }
     public TetraminoData[] Tetrominos;
     public Vector3Int SpawnPosition;
+    public Vector2Int BoardSize = new Vector2Int(10, 20);
+    public RectInt Bounds 
+    {
+        get 
+        {
+            Vector2Int position = new Vector2Int(-this.BoardSize.x / 2, -this.BoardSize.y / 2);
+            return new RectInt(position, this.BoardSize);
+        }
+    }
 
     private void Awake()
     {
@@ -38,5 +47,23 @@ public class Board : MonoBehaviour
             Vector3Int tilePosition = piece.Cells[i] + piece.Position;
             tilemap.SetTile(tilePosition, piece.Data.tile);
         }
+    }
+
+    public bool IsValidPosition(Piece piece, Vector3Int position)
+    {
+        for (int i = 0; i < piece.Cells.Length; i++)
+        {
+            Vector3Int tilePosition = piece.Cells[i] + position;
+            if (!Bounds.Contains((Vector2Int)tilePosition))
+            {
+                return false;
+            }
+
+            if (this.tilemap.HasTile(tilePosition))
+            {
+                return false;
+            }
+        }
+        return true;
     }
 }
