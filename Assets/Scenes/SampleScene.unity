@@ -1288,11 +1288,15 @@ MonoBehaviour:
   - tetramino: 6
     tile: {fileID: 11400000, guid: cd817923446b2204b9ca4a8d00114d90, type: 2}
 <<<<<<< HEAD
+<<<<<<< HEAD
   SpawnPosition: {x: -1, y: 8, z: 0}
 <<<<<<< Updated upstream
 =======
   BoardSize: {x: 10, y: 20}
 >>>>>>> Stashed changes
+=======
+  SpawnPosition: {x: 1, y: 1, z: 0}
+>>>>>>> parent of 965a2c6 (Merge pull request #2 from rodyaTMB/main)
 =======
   SpawnPosition: {x: 1, y: 1, z: 0}
 >>>>>>> parent of 965a2c6 (Merge pull request #2 from rodyaTMB/main)
